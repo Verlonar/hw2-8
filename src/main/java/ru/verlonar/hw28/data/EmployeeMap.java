@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class EmployeeMap {
 
-    private static final Map<String, Employee> employees = new HashMap<>();
+    private static final Map<String, Employee> EMPLOYEES = new HashMap<>();
 
     public static Map<String, Employee> getEmployees() {
-        return employees;
+        return EMPLOYEES;
     }
 }

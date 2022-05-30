@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 @Service
 public class DepartmentServiceImpl implements DepartmentService {
 
-    final Map<String, Employee> employees;
+    private final Map<String, Employee> employees;
 
     public DepartmentServiceImpl() {
         this.employees = EmployeeMap.getEmployees();

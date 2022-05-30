@@ -12,7 +12,7 @@ import java.util.Map;
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-    final Map<String, Employee> employees;
+    private final Map<String, Employee> employees;
 
     public EmployeeServiceImpl() {
         this.employees = EmployeeMap.getEmployees();
