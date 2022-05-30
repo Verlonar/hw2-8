@@ -2,30 +2,30 @@ package ru.verlonar.hw28.service.impl;
 
 import org.springframework.stereotype.Service;
 import ru.verlonar.hw28.data.Employee;
+import ru.verlonar.hw28.data.EmployeeMap;
 import ru.verlonar.hw28.exception.EmployeeIsAlreadyExistException;
 import ru.verlonar.hw28.exception.EmployeeNotFoundException;
 import ru.verlonar.hw28.service.EmployeeService;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
-    final Map<String, Employee> employees;
+    private final Map<String, Employee> employees;
 
     public EmployeeServiceImpl() {
-        this.employees = new HashMap<>();
+        this.employees = EmployeeMap.getEmployees();
     }
 
     @Override
-    public Employee addEmployee(String firstName, String lastName) {
+    public Employee addEmployee(String firstName, String lastName, int department, double salary) {
         Employee newEmployee = contains(firstName, lastName);
         if (newEmployee != null) {
             throw new EmployeeIsAlreadyExistException();
         } else {
             String fullName = firstName + " " + lastName;
-            newEmployee = new Employee(firstName, lastName);
+            newEmployee = new Employee(firstName, lastName, department, salary);
             employees.put(fullName, newEmployee);
             return newEmployee;
         }
