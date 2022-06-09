@@ -42,13 +42,6 @@ public class EmployeeServiceImplTestConstants {
             JONATHAN_FIRST_NAME + " " + JONATHAN_LAST_NAME, JONATHAN_EMPLOYEE
     );
 
-    public static final List<Employee> EMPLOYEE_MAP_WITHOUT_FILL = List.of(
-            BOB_EMPLOYEE,
-            JOHN_EMPLOYEE,
-            JONATHAN_EMPLOYEE
-
-    );
-
     public static final List<Employee> EMPLOYEE_MAP_FROM_0_DEPARTMENT = List.of(
             BOB_EMPLOYEE,
             JOHN_EMPLOYEE
